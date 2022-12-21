@@ -1,0 +1,6 @@
+framework module Pods_CDPTests {
+  umbrella header "Pods-CDPTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
