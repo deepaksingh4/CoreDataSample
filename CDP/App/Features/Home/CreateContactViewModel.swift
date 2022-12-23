@@ -10,9 +10,7 @@ import RxSwift
 import RxCocoa
 
 
-struct HomeViewModel: HomeViewModelProtocol {
-    
-    private let pinUseCase = PinsUseCase()
+struct CreateContactViewModel: CreateContactVMProtocol {
     
     var userName = BehaviorRelay<String?>(value: nil)
     var pinValue = BehaviorRelay<String?>(value: nil)
@@ -33,9 +31,13 @@ struct HomeViewModel: HomeViewModelProtocol {
     
 }
 
-extension HomeViewModel {
+extension CreateContactViewModel {
     
     func savePin(with disposeBag: DisposeBag){
+        
+    }
+    
+    func save(){
         
     }
 }

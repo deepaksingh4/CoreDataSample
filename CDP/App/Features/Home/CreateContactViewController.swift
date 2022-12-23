@@ -9,9 +9,9 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class HomeViewController: UIViewController {
+class CreateContactViewController: UIViewController {
     
-    var vm = HomeViewModel()
+    var vm = CreateContactViewModel()
     let disposedBag = DisposeBag()
     
     @IBOutlet weak var phone: UITextField!
@@ -25,6 +25,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindForm()
+        bindButtons()
     }
     
     func setUpUI(){
@@ -61,7 +62,6 @@ class HomeViewController: UIViewController {
             .bind(to: vm.pinName)
             .disposed(by: disposedBag)
         
-        saveButton.rx.tap.asObservable().bind(to: <#T##()...##()#>)
         
         vm.isFormValid.bind(to: saveButton.rx.isEnabled).disposed(by: disposedBag)
         vm.isFormValid.bind(to: happyLabel.rx.isHidden).disposed(by: disposedBag)
@@ -70,13 +70,27 @@ class HomeViewController: UIViewController {
         }.bind(to: pin.rx.text)
             .disposed(by: disposedBag)
     }
+    
+    func bindButtons(){
+        saveButton.rx
+            .tap.bind{
+                debugPrint("sasa")
+            }.disposed(by: disposedBag)
+        
+        vm.isFormValid.asDriver(onErrorJustReturn: false).drive(onDisposed: {
+        onNext:do {
+            
+        }
+        })
+    }
 }
 
-extension HomeViewController {
+extension CreateContactViewController {
     
     @IBAction func save(){
         vm.savePin(with: disposedBag)
     }
 
+    
 }
 

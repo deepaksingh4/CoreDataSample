@@ -8,6 +8,6 @@
 import Foundation
 import RxSwift
 
-protocol HomeViewModelProtocol {
+protocol CreateContactVMProtocol {
     func savePin(with disposeBag: DisposeBag)
 }

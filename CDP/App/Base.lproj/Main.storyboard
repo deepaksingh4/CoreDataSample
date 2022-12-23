@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-1317" y="152"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Create Contact View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="CDP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CreateContactViewController" customModule="CDP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,8 +96,56 @@
             </objects>
             <point key="canvasLocation" x="139" y="-2"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="4y6-tn-7nW">
+            <objects>
+                <viewController id="JZv-DD-Mu7" customClass="LoginViewController" customModule="CDP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xsf-O6-FfB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TtY-hp-jmn">
+                                <rect key="frame" x="96.666666666666686" y="421.66666666666669" width="200" height="34"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="tiu-b0-ZFo"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="riD-jg-g79">
+                                <rect key="frame" x="96.666666666666686" y="473.66666666666669" width="200" height="34"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wlJ-dt-HBw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="riD-jg-g79" firstAttribute="leading" secondItem="TtY-hp-jmn" secondAttribute="leading" id="5xA-FI-3RA"/>
+                            <constraint firstItem="TtY-hp-jmn" firstAttribute="centerX" secondItem="wlJ-dt-HBw" secondAttribute="centerX" id="Nxn-4t-ARs"/>
+                            <constraint firstItem="TtY-hp-jmn" firstAttribute="centerY" secondItem="wlJ-dt-HBw" secondAttribute="centerY" id="dzy-Ai-52A"/>
+                            <constraint firstItem="riD-jg-g79" firstAttribute="top" secondItem="TtY-hp-jmn" secondAttribute="bottom" constant="18" id="eC8-gZ-l6C"/>
+                            <constraint firstItem="riD-jg-g79" firstAttribute="trailing" secondItem="TtY-hp-jmn" secondAttribute="trailing" id="n2N-gf-3EC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="password" destination="riD-jg-g79" id="Lwm-CS-poY"/>
+                        <outlet property="userName" destination="TtY-hp-jmn" id="N8n-tC-1bH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qx9-Rb-BNZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-272.51908396946561" y="644.36619718309862"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

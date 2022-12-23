@@ -11,7 +11,7 @@
 		C9EAB559C4A186648A2D7B66 /* Pods_CDP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D919CFEA9505BFED62219D71 /* Pods_CDP.framework */; };
 		D925496C292E4C4400F03A5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925496B292E4C4400F03A5E /* AppDelegate.swift */; };
 		D925496E292E4C4400F03A5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925496D292E4C4400F03A5E /* SceneDelegate.swift */; };
-		D9254970292E4C4400F03A5E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925496F292E4C4400F03A5E /* HomeViewController.swift */; };
+		D9254970292E4C4400F03A5E /* CreateContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925496F292E4C4400F03A5E /* CreateContactViewController.swift */; };
 		D9254973292E4C4400F03A5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9254971292E4C4400F03A5E /* Main.storyboard */; };
 		D9254976292E4C4500F03A5E /* CDP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9254974292E4C4500F03A5E /* CDP.xcdatamodeld */; };
 		D9254978292E4C4800F03A5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9254977292E4C4800F03A5E /* Assets.xcassets */; };
@@ -21,17 +21,23 @@
 		D9254992292E4C4800F03A5E /* CDPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9254991292E4C4800F03A5E /* CDPUITestsLaunchTests.swift */; };
 		D92549A3292E4EDC00F03A5E /* PersistantStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92549A2292E4EDC00F03A5E /* PersistantStorage.swift */; };
 		D968010A2940889D00D8A34E /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96801092940889D00D8A34E /* Validator.swift */; };
-		D9D9FE3C2930ABC000B5100D /* PinsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D9FE3B2930ABC000B5100D /* PinsUseCase.swift */; };
-		D9D9FE3E2930ABF200B5100D /* PinsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D9FE3D2930ABF200B5100D /* PinsRepository.swift */; };
-		D9D9FE412930D92000B5100D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D9FE402930D92000B5100D /* HomeViewModel.swift */; };
-		D9FD2437293485CA001A8AE4 /* SavedPins+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD2433293485CA001A8AE4 /* SavedPins+CoreDataClass.swift */; };
-		D9FD2438293485CA001A8AE4 /* SavedPins+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD2434293485CA001A8AE4 /* SavedPins+CoreDataProperties.swift */; };
-		D9FD2439293485CA001A8AE4 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD2435293485CA001A8AE4 /* User+CoreDataClass.swift */; };
-		D9FD243A293485CA001A8AE4 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD2436293485CA001A8AE4 /* User+CoreDataProperties.swift */; };
-		D9FD24402934E11A001A8AE4 /* HomeViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD243F2934E11A001A8AE4 /* HomeViewModelProtocol.swift */; };
-		D9FD24442934E266001A8AE4 /* PinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD24432934E266001A8AE4 /* PinModel.swift */; };
-		D9FD24472934E298001A8AE4 /* PinUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD24462934E298001A8AE4 /* PinUseCaseProtocol.swift */; };
-		D9FD24492934E2AB001A8AE4 /* PinRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD24482934E2AB001A8AE4 /* PinRepositoryProtocol.swift */; };
+		D986662929531B1F008FA023 /* DeleteContactUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986662829531B1F008FA023 /* DeleteContactUseCaseProtocol.swift */; };
+		D986662B29531CC8008FA023 /* UpdateContactUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986662A29531CC8008FA023 /* UpdateContactUseCaseProtocol.swift */; };
+		D986662E29531F47008FA023 /* DeleteContactUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986662C29531F47008FA023 /* DeleteContactUseCase.swift */; };
+		D986662F29531F47008FA023 /* UpdateContactUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986662D29531F47008FA023 /* UpdateContactUseCase.swift */; };
+		D986663229549076008FA023 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986663129549076008FA023 /* LoginViewController.swift */; };
+		D986663429549081008FA023 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986663329549081008FA023 /* LoginViewModel.swift */; };
+		D986663629549147008FA023 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986663529549147008FA023 /* String+Extension.swift */; };
+		D986663829549504008FA023 /* LoginViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986663729549504008FA023 /* LoginViewModelProtocol.swift */; };
+		D9CAC7E22953140300F8D03E /* Contacts+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CAC7E02953140300F8D03E /* Contacts+CoreDataClass.swift */; };
+		D9CAC7E32953140300F8D03E /* Contacts+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CAC7E12953140300F8D03E /* Contacts+CoreDataProperties.swift */; };
+		D9D9FE3C2930ABC000B5100D /* CreateContactUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D9FE3B2930ABC000B5100D /* CreateContactUseCase.swift */; };
+		D9D9FE3E2930ABF200B5100D /* ContactDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D9FE3D2930ABF200B5100D /* ContactDataRepository.swift */; };
+		D9D9FE412930D92000B5100D /* CreateContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D9FE402930D92000B5100D /* CreateContactViewModel.swift */; };
+		D9FD24402934E11A001A8AE4 /* CreateContactVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD243F2934E11A001A8AE4 /* CreateContactVMProtocol.swift */; };
+		D9FD24442934E266001A8AE4 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD24432934E266001A8AE4 /* ContactModel.swift */; };
+		D9FD24472934E298001A8AE4 /* CreateContactUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD24462934E298001A8AE4 /* CreateContactUseCaseProtocol.swift */; };
+		D9FD24492934E2AB001A8AE4 /* ContactRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD24482934E2AB001A8AE4 /* ContactRepositoryProtocol.swift */; };
 		DDFFB7C0EFFF0A65FB503D2F /* Pods_CDPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4CC19C5C393C37A14A7086D /* Pods_CDPTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +70,7 @@
 		D9254968292E4C4400F03A5E /* CDP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D925496B292E4C4400F03A5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D925496D292E4C4400F03A5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D925496F292E4C4400F03A5E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D925496F292E4C4400F03A5E /* CreateContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContactViewController.swift; sourceTree = "<group>"; };
 		D9254972292E4C4400F03A5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9254975292E4C4500F03A5E /* CDP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDP.xcdatamodel; sourceTree = "<group>"; };
 		D9254977292E4C4800F03A5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,18 +83,24 @@
 		D9254991292E4C4800F03A5E /* CDPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDPUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D92549A2292E4EDC00F03A5E /* PersistantStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistantStorage.swift; sourceTree = "<group>"; };
 		D96801092940889D00D8A34E /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
-		D9D9FE3B2930ABC000B5100D /* PinsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinsUseCase.swift; sourceTree = "<group>"; };
-		D9D9FE3D2930ABF200B5100D /* PinsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinsRepository.swift; sourceTree = "<group>"; };
-		D9D9FE402930D92000B5100D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D986662829531B1F008FA023 /* DeleteContactUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteContactUseCaseProtocol.swift; sourceTree = "<group>"; };
+		D986662A29531CC8008FA023 /* UpdateContactUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateContactUseCaseProtocol.swift; sourceTree = "<group>"; };
+		D986662C29531F47008FA023 /* DeleteContactUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteContactUseCase.swift; sourceTree = "<group>"; };
+		D986662D29531F47008FA023 /* UpdateContactUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateContactUseCase.swift; sourceTree = "<group>"; };
+		D986663129549076008FA023 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D986663329549081008FA023 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D986663529549147008FA023 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		D986663729549504008FA023 /* LoginViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelProtocol.swift; sourceTree = "<group>"; };
+		D9CAC7E02953140300F8D03E /* Contacts+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Contacts+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D9CAC7E12953140300F8D03E /* Contacts+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Contacts+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D9D9FE3B2930ABC000B5100D /* CreateContactUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContactUseCase.swift; sourceTree = "<group>"; };
+		D9D9FE3D2930ABF200B5100D /* ContactDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataRepository.swift; sourceTree = "<group>"; };
+		D9D9FE402930D92000B5100D /* CreateContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContactViewModel.swift; sourceTree = "<group>"; };
 		D9EA52A729376D7600EBEA37 /* Swift5.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Swift5.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		D9FD2433293485CA001A8AE4 /* SavedPins+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedPins+CoreDataClass.swift"; sourceTree = "<group>"; };
-		D9FD2434293485CA001A8AE4 /* SavedPins+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedPins+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		D9FD2435293485CA001A8AE4 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		D9FD2436293485CA001A8AE4 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		D9FD243F2934E11A001A8AE4 /* HomeViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelProtocol.swift; sourceTree = "<group>"; };
-		D9FD24432934E266001A8AE4 /* PinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinModel.swift; sourceTree = "<group>"; };
-		D9FD24462934E298001A8AE4 /* PinUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinUseCaseProtocol.swift; sourceTree = "<group>"; };
-		D9FD24482934E2AB001A8AE4 /* PinRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinRepositoryProtocol.swift; sourceTree = "<group>"; };
+		D9FD243F2934E11A001A8AE4 /* CreateContactVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContactVMProtocol.swift; sourceTree = "<group>"; };
+		D9FD24432934E266001A8AE4 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		D9FD24462934E298001A8AE4 /* CreateContactUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContactUseCaseProtocol.swift; sourceTree = "<group>"; };
+		D9FD24482934E2AB001A8AE4 /* ContactRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRepositoryProtocol.swift; sourceTree = "<group>"; };
 		E9673F49FEBD647FB32C9D88 /* Pods-CDP-CDPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDP-CDPUITests.debug.xcconfig"; path = "Target Support Files/Pods-CDP-CDPUITests/Pods-CDP-CDPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,14 +214,25 @@
 			isa = PBXGroup;
 			children = (
 				D96801092940889D00D8A34E /* Validator.swift */,
+				D986663529549147008FA023 /* String+Extension.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		D986663029549051008FA023 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D986663129549076008FA023 /* LoginViewController.swift */,
+				D986663329549081008FA023 /* LoginViewModel.swift */,
+				D986663729549504008FA023 /* LoginViewModelProtocol.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		D9D9FE3F2930B71F00B5100D /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				D9D9FE3D2930ABF200B5100D /* PinsRepository.swift */,
+				D9D9FE3D2930ABF200B5100D /* ContactDataRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -249,7 +272,7 @@
 		D9FD243E2934E0F8001A8AE4 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				D9FD243F2934E11A001A8AE4 /* HomeViewModelProtocol.swift */,
+				D9FD243F2934E11A001A8AE4 /* CreateContactVMProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -257,8 +280,8 @@
 		D9FD24412934E1EA001A8AE4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				D925496F292E4C4400F03A5E /* HomeViewController.swift */,
-				D9D9FE402930D92000B5100D /* HomeViewModel.swift */,
+				D925496F292E4C4400F03A5E /* CreateContactViewController.swift */,
+				D9D9FE402930D92000B5100D /* CreateContactViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -266,6 +289,7 @@
 		D9FD24422934E1F6001A8AE4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D986663029549051008FA023 /* Login */,
 				D9FD24412934E1EA001A8AE4 /* Home */,
 			);
 			path = Features;
@@ -274,8 +298,10 @@
 		D9FD24452934E283001A8AE4 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				D9FD24462934E298001A8AE4 /* PinUseCaseProtocol.swift */,
-				D9FD24482934E2AB001A8AE4 /* PinRepositoryProtocol.swift */,
+				D9FD24482934E2AB001A8AE4 /* ContactRepositoryProtocol.swift */,
+				D9FD24462934E298001A8AE4 /* CreateContactUseCaseProtocol.swift */,
+				D986662829531B1F008FA023 /* DeleteContactUseCaseProtocol.swift */,
+				D986662A29531CC8008FA023 /* UpdateContactUseCaseProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -283,7 +309,9 @@
 		D9FD244A2934E2EB001A8AE4 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				D9D9FE3B2930ABC000B5100D /* PinsUseCase.swift */,
+				D986662C29531F47008FA023 /* DeleteContactUseCase.swift */,
+				D986662D29531F47008FA023 /* UpdateContactUseCase.swift */,
+				D9D9FE3B2930ABC000B5100D /* CreateContactUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -291,10 +319,8 @@
 		D9FD244B2934E3F8001A8AE4 /* CoreDataModels */ = {
 			isa = PBXGroup;
 			children = (
-				D9FD2433293485CA001A8AE4 /* SavedPins+CoreDataClass.swift */,
-				D9FD2434293485CA001A8AE4 /* SavedPins+CoreDataProperties.swift */,
-				D9FD2435293485CA001A8AE4 /* User+CoreDataClass.swift */,
-				D9FD2436293485CA001A8AE4 /* User+CoreDataProperties.swift */,
+				D9CAC7E12953140300F8D03E /* Contacts+CoreDataProperties.swift */,
+				D9CAC7E02953140300F8D03E /* Contacts+CoreDataClass.swift */,
 			);
 			path = CoreDataModels;
 			sourceTree = "<group>";
@@ -302,7 +328,7 @@
 		D9FD244C2934E40B001A8AE4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D9FD24432934E266001A8AE4 /* PinModel.swift */,
+				D9FD24432934E266001A8AE4 /* ContactModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -546,23 +572,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9D9FE412930D92000B5100D /* HomeViewModel.swift in Sources */,
-				D9254970292E4C4400F03A5E /* HomeViewController.swift in Sources */,
-				D9FD243A293485CA001A8AE4 /* User+CoreDataProperties.swift in Sources */,
-				D9D9FE3E2930ABF200B5100D /* PinsRepository.swift in Sources */,
-				D9FD24402934E11A001A8AE4 /* HomeViewModelProtocol.swift in Sources */,
+				D9CAC7E22953140300F8D03E /* Contacts+CoreDataClass.swift in Sources */,
+				D986662F29531F47008FA023 /* UpdateContactUseCase.swift in Sources */,
+				D9D9FE412930D92000B5100D /* CreateContactViewModel.swift in Sources */,
+				D9254970292E4C4400F03A5E /* CreateContactViewController.swift in Sources */,
+				D9D9FE3E2930ABF200B5100D /* ContactDataRepository.swift in Sources */,
+				D9CAC7E32953140300F8D03E /* Contacts+CoreDataProperties.swift in Sources */,
+				D9FD24402934E11A001A8AE4 /* CreateContactVMProtocol.swift in Sources */,
 				D925496C292E4C4400F03A5E /* AppDelegate.swift in Sources */,
+				D986663229549076008FA023 /* LoginViewController.swift in Sources */,
 				D925496E292E4C4400F03A5E /* SceneDelegate.swift in Sources */,
-				D9FD24442934E266001A8AE4 /* PinModel.swift in Sources */,
-				D9FD24472934E298001A8AE4 /* PinUseCaseProtocol.swift in Sources */,
+				D9FD24442934E266001A8AE4 /* ContactModel.swift in Sources */,
+				D986662B29531CC8008FA023 /* UpdateContactUseCaseProtocol.swift in Sources */,
+				D986663629549147008FA023 /* String+Extension.swift in Sources */,
+				D9FD24472934E298001A8AE4 /* CreateContactUseCaseProtocol.swift in Sources */,
+				D986662E29531F47008FA023 /* DeleteContactUseCase.swift in Sources */,
 				D92549A3292E4EDC00F03A5E /* PersistantStorage.swift in Sources */,
 				D9254976292E4C4500F03A5E /* CDP.xcdatamodeld in Sources */,
-				D9FD2438293485CA001A8AE4 /* SavedPins+CoreDataProperties.swift in Sources */,
 				D968010A2940889D00D8A34E /* Validator.swift in Sources */,
-				D9FD2439293485CA001A8AE4 /* User+CoreDataClass.swift in Sources */,
-				D9FD2437293485CA001A8AE4 /* SavedPins+CoreDataClass.swift in Sources */,
-				D9D9FE3C2930ABC000B5100D /* PinsUseCase.swift in Sources */,
-				D9FD24492934E2AB001A8AE4 /* PinRepositoryProtocol.swift in Sources */,
+				D986662929531B1F008FA023 /* DeleteContactUseCaseProtocol.swift in Sources */,
+				D9D9FE3C2930ABC000B5100D /* CreateContactUseCase.swift in Sources */,
+				D986663829549504008FA023 /* LoginViewModelProtocol.swift in Sources */,
+				D9FD24492934E2AB001A8AE4 /* ContactRepositoryProtocol.swift in Sources */,
+				D986663429549081008FA023 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
