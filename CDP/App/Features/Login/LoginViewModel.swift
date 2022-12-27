@@ -6,9 +6,11 @@
 //
 
 import Foundation
-
+import RxSwift
 class LoginViewModel: LoginViewModelProtocol {
+    var bag = DisposeBag()
     
+    var userName: BehaviorSubject<String> = BehaviorSubject(value: "")
     
     func validateUsername(username: String) -> Bool{
         return username.isValidEmail

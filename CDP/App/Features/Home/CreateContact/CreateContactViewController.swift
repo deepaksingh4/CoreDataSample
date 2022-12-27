@@ -9,7 +9,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class CreateContactViewController: UIViewController {
+class CreateContactViewController: UIViewController, Storyboarded {
     
     var vm = CreateContactViewModel()
     let disposedBag = DisposeBag()

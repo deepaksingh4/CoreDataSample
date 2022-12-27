@@ -6,7 +6,8 @@
 //
 
 import Foundation
-
+import RxSwift
 protocol LoginViewModelProtocol {
+    var userName: BehaviorSubject<String> {get set}
     func validateUsername(username: String) -> Bool
 }
