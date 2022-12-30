@@ -20,6 +20,7 @@
 		D9254990292E4C4800F03A5E /* CDPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925498F292E4C4800F03A5E /* CDPUITests.swift */; };
 		D9254992292E4C4800F03A5E /* CDPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9254991292E4C4800F03A5E /* CDPUITestsLaunchTests.swift */; };
 		D92549A3292E4EDC00F03A5E /* PersistantStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92549A2292E4EDC00F03A5E /* PersistantStorage.swift */; };
+		D92C9E9F295ED5390023F6A4 /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C9E9E295ED5390023F6A4 /* UIView+Border.swift */; };
 		D968010A2940889D00D8A34E /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96801092940889D00D8A34E /* Validator.swift */; };
 		D986662929531B1F008FA023 /* DeleteContactUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986662829531B1F008FA023 /* DeleteContactUseCaseProtocol.swift */; };
 		D986662B29531CC8008FA023 /* UpdateContactUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986662A29531CC8008FA023 /* UpdateContactUseCaseProtocol.swift */; };
@@ -90,6 +91,7 @@
 		D925498F292E4C4800F03A5E /* CDPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDPUITests.swift; sourceTree = "<group>"; };
 		D9254991292E4C4800F03A5E /* CDPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDPUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D92549A2292E4EDC00F03A5E /* PersistantStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistantStorage.swift; sourceTree = "<group>"; };
+		D92C9E9E295ED5390023F6A4 /* UIView+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
 		D96801092940889D00D8A34E /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		D986662829531B1F008FA023 /* DeleteContactUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteContactUseCaseProtocol.swift; sourceTree = "<group>"; };
 		D986662A29531CC8008FA023 /* UpdateContactUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateContactUseCaseProtocol.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				D96801092940889D00D8A34E /* Validator.swift */,
 				D986663529549147008FA023 /* String+Extension.swift */,
 				D9B300CD2959D7430099BD3F /* Storyboarded.swift */,
+				D92C9E9E295ED5390023F6A4 /* UIView+Border.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				D9FD24442934E266001A8AE4 /* ContactModel.swift in Sources */,
 				D986662B29531CC8008FA023 /* UpdateContactUseCaseProtocol.swift in Sources */,
 				D986663629549147008FA023 /* String+Extension.swift in Sources */,
+				D92C9E9F295ED5390023F6A4 /* UIView+Border.swift in Sources */,
 				D9FD24472934E298001A8AE4 /* CreateContactUseCaseProtocol.swift in Sources */,
 				D986662E29531F47008FA023 /* DeleteContactUseCase.swift in Sources */,
 				D92549A3292E4EDC00F03A5E /* PersistantStorage.swift in Sources */,

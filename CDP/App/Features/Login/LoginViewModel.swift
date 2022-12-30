@@ -11,8 +11,29 @@ class LoginViewModel: LoginViewModelProtocol {
     var bag = DisposeBag()
     
     var userName: BehaviorSubject<String> = BehaviorSubject(value: "")
+    var password: BehaviorSubject<String> = BehaviorSubject(value: "")
+    var isValidCred: PublishSubject<Bool> = PublishSubject()
     
-    func validateUsername(username: String) -> Bool{
-        return username.isValidEmail
+    func setup(){
+        Observable.combineLatest(userName.asObservable(), password.asObservable()).subscribe { [weak self](userName, password) in
+            if userName == "Deepak" && password == "pass" {
+                self?.isValidCred.onNext(true)
+            }else{
+                self?.isValidCred.onNext(false)
+            }
+        }.disposed(by: bag)
+    }
+    
+    func performLogin() -> Single<Bool> {
+        return Single<Bool>.create{ observer in
+            //call API
+            observer(.success(true))
+            return Disposables.create {
+                
+            }
+        }
+    }
+    init(){
+        setup()
     }
 }

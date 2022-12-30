@@ -9,5 +9,8 @@ import Foundation
 import RxSwift
 protocol LoginViewModelProtocol {
     var userName: BehaviorSubject<String> {get set}
-    func validateUsername(username: String) -> Bool
+    var password: BehaviorSubject<String> {get set}
+    var isValidCred: PublishSubject<Bool> {get set}
+    
+    func performLogin() -> Single<Bool> 
 }

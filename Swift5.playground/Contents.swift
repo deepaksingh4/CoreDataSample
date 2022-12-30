@@ -23,35 +23,100 @@ var fromObservable = Observable<Int>.from([1,2,3,1,2,23,22,23,44])
 //AsyncSubject
 //
 
-BehaviorRelay
-justObservable.subscribe(onNext: { value in
-//    this block would get all the elements in the Observable Sequence
-    print(value)
-},onError: { error in
-    print("Error")
-}, onCompleted: {
-//    marks the completion of sequence
-    print("comp")
-})
 
-var name: BehaviorSubject<String> = BehaviorSubject<String>(value: "aa")
 
-let sub1 = name.subscribe{element in
-    print(element)
+//justObservable.subscribe(onNext: { value in
+////    this block would get all the elements in the Observable Sequence
+//    print(value)
+//},onError: { error in
+//    print("Error")
+//}, onCompleted: {
+////    marks the completion of sequence
+//    print("comp")
+//})
+//
+//var name: BehaviorSubject<String> = BehaviorSubject<String>(value: "aa")
+//
+//let sub1 = name.subscribe{element in
+//    print(element)
+//}
+//
+//name.onNext("aba")
+//
+//var newObservable = Observable<String>.just("sample")
+//
+//newObservable.subscribe{ ele  in
+//    print(ele)
+//}
+
+
+
+
+
+//    let disposeBag = DisposeBag()
+//
+//    struct Player {
+//        init(score: Int) {
+//            self.score = ReplaySubject<Int>.create(bufferSize: 3)
+//            self.score.onNext(score)
+//        }
+//
+//        let score: ReplaySubject<Int>
+//    }
+//
+//    let 👦🏻 = Player(score: 80)
+//    let 👧🏼 = Player(score: 90)
+//
+//    let player = BehaviorSubject(value: 👦🏻)
+//
+//    player.asObservable()
+//        .flatMap { playr in
+//            playr.score.onNext(55)
+//            playr.score.onNext(65)
+//            playr.score.onNext(75)
+//            return playr.score.asObservable()
+//
+//        } // Change flatMap to flatMapLatest and observe change in printed output
+//        .subscribe(onNext: { print($0) })
+//        .disposed(by: disposeBag)
+//
+//    👦🏻.score.onNext(85)
+//
+//    player.onNext(👧🏼)
+//
+//    👦🏻.score.onNext(95) // Will be printed when using flatMap, but will not be printed when using flatMapLatest
+//    👧🏼.score.onNext(100)
+//
+//flatmap merging the array inone single array
+
+
+enum SError : Error{
+    case Unkown
+}
+let disposeBag = DisposeBag()
+var count = 1
+
+let sequenceThatErrors = Observable<String>.create { observer in
+    observer.onNext("🍎")
+    observer.onNext("🍐")
+    observer.onNext("🍊")
+    
+    if count < 5 {
+        observer.onError(SError.Unkown)
+        print("Error encountered")
+        count += 1
+    }
+    
+    observer.onNext("🐶")
+    observer.onNext("🐱")
+    observer.onNext("🐭")
+    observer.onCompleted()
+    
+    return Disposables.create()
 }
 
-name.onNext("aba")
-
-var newObservable = Observable<String>.just("sample")
-
-newObservable.subscribe{ ele  in
-    print(ele)
-}
-
-
-
-
-
-
-
+sequenceThatErrors
+    .retry(4)
+    .subscribe(onNext: { print($0) })
+    .disposed(by: disposeBag)
 

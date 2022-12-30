@@ -21,24 +21,26 @@ class LoginViewController: UIViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.setBorder(width: 2, color: .white)
+        btnLogin.addCorner()
+        btnLogin.isEnabled = false
+        performBinding()
         // Do any additional setup after loading the view.
     }
     
     func performBinding(){
         userName.rx.text.orEmpty.bind(to: viewModel.userName).disposed(by: bag)
+        password.rx.text.orEmpty.bind(to: viewModel.password).disposed(by: bag)
+        viewModel.isValidCred.asDriver(onErrorJustReturn: true).drive(btnLogin.rx.isEnabled)
+            .disposed(by: bag)
        
-    }
-    
-    func singleObserver() -> Single<[String : Any]>{
-        return  Single<[String : Any]>.create { single in
-            single(.success(["aa":"aa"])) as! any Disposable
-        }
     }
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
 
+    
+    
     /*
     // MARK: - Navigation
 
