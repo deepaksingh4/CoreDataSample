@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+import RxCocoa
 protocol ContactCoordinatorProtocol: Coordinator{
     func addContact()
     func removeContact()
@@ -40,7 +40,6 @@ class ContactCoordinator: ContactCoordinatorProtocol {
         let contactListingViewController = ConactListingTableViewController.instantiate()
         let viewModel = ContactListingViewModel()
         contactListingViewController.viewModel = viewModel
-        
         self.navigationController.pushViewController(contactListingViewController, animated: true)
     }
     

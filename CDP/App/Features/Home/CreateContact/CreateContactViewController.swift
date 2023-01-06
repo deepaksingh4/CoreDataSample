@@ -19,17 +19,21 @@ class CreateContactViewController: UIViewController, Storyboarded {
     @IBOutlet weak var pinKey: UITextField!
     @IBOutlet weak var pin: UITextField!
     
-    @IBOutlet weak var happyLabel: UILabel!
+    @IBOutlet weak var cardBackground: UIView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
      
     override func viewDidLoad() {
         super.viewDidLoad()
         bindForm()
         bindButtons()
+        setUpUI()
     }
     
     func setUpUI(){
-        happyLabel.text = "Thanks for filling the form correctly ;)"
+        cardBackground.layer.cornerRadius = 10
+        cardBackground.layer.shadowColor = UIColor.gray.cgColor
+        cardBackground.layer.shadowOffset = CGSize(width: 2, height: 3)
+        cardBackground.layer.shadowRadius = 3
     }
     
     
@@ -64,7 +68,6 @@ class CreateContactViewController: UIViewController, Storyboarded {
         
         
         vm.isFormValid.bind(to: saveButton.rx.isEnabled).disposed(by: disposedBag)
-        vm.isFormValid.bind(to: happyLabel.rx.isHidden).disposed(by: disposedBag)
         pin.rx.text.orEmpty.scan("") {(old, new ) -> String in
             return new
         }.bind(to: pin.rx.text)

@@ -11,6 +11,13 @@ class ContactTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblPhoneNmber: UILabel!
+    var contact : ContactModel? {
+        didSet{
+            self.lblName.text = contact?.name
+            self.lblPhoneNmber.text = contact?.phoneNumber
+            
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

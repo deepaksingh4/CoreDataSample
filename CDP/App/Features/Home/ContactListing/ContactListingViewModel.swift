@@ -6,7 +6,11 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 struct ContactListingViewModel{
+   static let sampleContacts = [ContactModel(phoneNumber: "123456789", email: "deepak@gmail.com", name: "Deepak")]
+    var contacts: BehaviorSubject<[ContactModel]> = BehaviorSubject(value: ContactListingViewModel.sampleContacts)
     
 }

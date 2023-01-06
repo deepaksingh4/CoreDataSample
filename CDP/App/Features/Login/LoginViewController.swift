@@ -15,6 +15,7 @@ class LoginViewController: UIViewController, Storyboarded {
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var password: UITextField!
     
+    var coordinator: MainCoordinator?
     
     private let viewModel: LoginViewModelProtocol = LoginViewModel()
     let bag: DisposeBag = DisposeBag()
@@ -35,20 +36,15 @@ class LoginViewController: UIViewController, Storyboarded {
             .disposed(by: bag)
        
     }
+    
+    @IBAction func doLogin(_ sender: Any) {
+        viewModel.performLogin().subscribe {[weak self] status in
+            self?.coordinator?.loginSuccessfull()
+        }.disposed(by: bag)
+    }
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

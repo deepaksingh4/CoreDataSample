@@ -18,11 +18,12 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        let loginVC = LoginViewController.instantiate()
+        let loginVC: LoginViewController = LoginViewController.instantiate()
+        loginVC.coordinator = self
         self.navigationController.pushViewController(loginVC, animated: false)
     }
     
-    func goToHome(){
+    func loginSuccessfull(){
         let contactCoordinator = ContactCoordinator(navigationController: self.navigationController)
         contactCoordinator.start()
         self.childCoordinators.append(contactCoordinator)

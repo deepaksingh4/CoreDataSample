@@ -12,5 +12,5 @@ protocol LoginViewModelProtocol {
     var password: BehaviorSubject<String> {get set}
     var isValidCred: PublishSubject<Bool> {get set}
     
-    func performLogin() -> Single<Bool> 
+    func performLogin() -> Single<Bool>
 }
